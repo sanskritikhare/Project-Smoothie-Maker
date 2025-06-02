@@ -1,5 +1,13 @@
+import classes
+
 # Function to match user’s ingredients with those for the desired nutrients
-def suggest_smoothie(nutrients_wanted, user_ingredients, base_choice):
+'''
+The function suggests smoothie ingredients based on desired nutrients, the user's available ingredients, and a chosen base.
+nutrients_wanted[list[str]] argument is a list of nutrient names (strings) the user wants in their smoothie.
+user_ingredients[set[str]] argument is a set of ingredient names (strings) that the user already has available.
+base_choice[str] argument is a string specifying the user’s chosen liquid base (e.g., "almond milk", "yogurt").
+'''
+def suggest_smoothie(nutrients_wanted, user_ingredients, base_choice) -> str:
     smoothie_ingredients = set()
 
     for nutrient in nutrients_wanted:
